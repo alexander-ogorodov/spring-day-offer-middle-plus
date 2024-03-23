@@ -1,9 +1,9 @@
 package com.onedayoffer.taskdistribution;
 
 import com.onedayoffer.taskdistribution.DTO.EmployeeDTO;
+import com.onedayoffer.taskdistribution.services.SimpleTaskDistributor;
 import com.onedayoffer.taskdistribution.utils.DataGenerator;
 import com.onedayoffer.taskdistribution.DTO.TaskDTO;
-import com.onedayoffer.taskdistribution.services.TaskDistributor;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -19,7 +19,7 @@ public class DistributionTest {
     private DataGenerator dataGenerator;
 
     @Autowired
-    private TaskDistributor taskDistributor;
+    private SimpleTaskDistributor taskDistributor;
 
     @Test
     public void shouldDistribute() {
